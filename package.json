@@ -1,0 +1,15 @@
+{
+  "name": "test-devops",
+  "version": "0.0.0",
+  "description": "test repo for depops",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "test",
+    "devops"
+  ],
+  "author": "teamrun",
+  "license": "mit"
+}
