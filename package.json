@@ -11,5 +11,8 @@
     "devops"
   ],
   "author": "teamrun",
-  "license": "mit"
+  "license": "mit",
+  "dependencies": {
+    "gulp": "^3.8.8"
+  }
 }
