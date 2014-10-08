@@ -13,6 +13,7 @@
   "author": "teamrun",
   "license": "mit",
   "dependencies": {
-    "gulp": "^3.8.8"
+    "gulp": "^3.8.8",
+    "gulp-rename": "^1.2.0"
   }
 }
