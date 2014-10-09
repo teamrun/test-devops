@@ -4,21 +4,23 @@ var cmd = require('child_process').spawn;
 
 var i=0;
 var restartTime = 0;
-setInterval(function(){
-  console.log(i++);
-  var pm2List = cmd('pm2', ['jlist']);
-  pm2List.stdout.on('data', function(data){
-    var resultJSON = JSON.parse(data.toString());
-    restartTime = resultJSON[0].pm2_env.restart_time;
-  });
-}, 5*1000);
+// setInterval(function(){
+//   console.log(i++);
+//   var pm2List = cmd('pm2', ['jlist']);
+//   pm2List.stdout.on('data', function(data){
+//     var resultJSON = JSON.parse(data.toString());
+//     restartTime = resultJSON[0].pm2_env.restart_time;
+//   });
+// }, 5*1000);
 
 
 var http = require('http');
 
+var start = new Date();
+
 var server = http.createServer(function(req, res){
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World!\n ' + restartTime);
+  res.end('Hello World! Depoly works~ server (re)started at:  '+[start.getHours(), start.getMinutes(), start.getSeconds()].join(':') );
 });
 
 var port = 3030;
