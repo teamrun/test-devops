@@ -15,3 +15,4 @@ console.log('server listen ing at: ', port);
 console.log(__filename);
 // test for git pull hook
 // test 2. after change hook file's mod
+// test 3. see what param passed
